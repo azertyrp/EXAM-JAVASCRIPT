@@ -1,0 +1,78 @@
+<html>
+
+<head>
+  <title>TP JAVASCRIPT PARFAIT Remy 04/02/2020</title>
+  <meta charset="UTF-8"/>
+  <script type="text/javascript">
+  
+
+	var tab=[4,675,32,87,9837,364,7492,45,345,324,374,8364,5967,12,483,8573,659,365,9573,309]; //Création du tableau tab avec son contennu
+	
+	function quiEstLeNombreLePlusGrand(a, b) //Fonction quiEstLeNombreLePlusGrand avec les arguments a et b
+	{
+	
+		if (a >= b) return (a); else return (b); //si a est supperieur ou égal a b, la fonction retourne a, sinon, elle retourne b
+		
+	}
+	
+	function aleatoireNombre(a) //Fonction aleatoirenombre avec argument a
+	{
+	
+		Math.floor((a)*Math.random()+1); //la fonction retourne un nombre aléatoire situé entre 0 et a
+	
+	}
+	
+	function affectation(a, b) //Fonction affectation avec argument a et b
+	{
+	
+		tab[a]=b; //Cette fonction prend le tableau tab et pour le secteur a il remplace son contenu par b
+	
+	}
+	
+	function jeu() //Fonction jeu
+	{
+		var fin = 5 //Variable fin initialisé a 5
+		while(fin > 0) {  //Boucle while qui s'execute tant que fin est supperieur a 0
+		
+			aleatoireNombre(a); //appel 1 de la fonction aleatoireNombre
+			aleatoireNombre(b); //appel 2 de la fonction aleatoireNombre
+			
+			If (a = b){ //Si a = b alors la boucle affiche "perdu"
+				alert('perdu.'); 
+			}else{  //Sinon
+				
+				If (a > b) {  //Modification des données dans le tableau
+					affectation(a, (b*-1))
+					affectation(a, (b+50))
+				}else{
+					affectation(b, (a*-1))
+					affectation(b, (a+50))
+				}
+				
+				var total:int = 0;	//Calcul de la somme du tableau
+				for(var i:int = 0;i<Tab.lenght;i++){
+				total += int(Tab[i]);
+				}
+			
+			If (total >= 0) alert('VOUS AVEZ GAGNE!!!!!!'); else alert('VOUS AVEZ PERDU :(');  //Affichage du resultat de la victoire ou de la défaite
+			}
+			
+			
+			fin = fin - 1; //la variable fin se décrémente de 1
+			
+		}
+		
+	}
+	
+
+  
+  </script>
+</head>
+<body>
+
+<h1>TP JAVASCRIPT PARFAIT Remy 04/02/2020</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="jeu()">Lancer la fonction</button></p>
+
+</body>
+</html>
